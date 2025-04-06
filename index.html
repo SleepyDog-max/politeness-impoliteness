@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politeness Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .quiz-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+        }
+        h1 {
+            color: #0277bd;
+            margin-bottom: 20px;
+        }
+        .question {
+            display: none;
+            color: #01579b;
+        }
+        .question.active {
+            display: block;
+        }
+        .options label {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #e1f5fe;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .options label:hover {
+            background: #b3e5fc;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid #4fc3f7;
+            border-radius: 8px;
+            resize: none;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            background: #0288d1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0277bd;
+        }
+        button:disabled {
+            background: #b0bec5;
+            cursor: not-allowed;
+        }
+        .progress {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #0288d1;
+        }
+        .summary {
+            display: none;
+            text-align: left;
+        }
+        .summary h2 {
+            color: #0277bd;
+        }
+        .summary p {
+            margin: 10px 0;
+            padding: 10px;
+            background: #e1f5fe;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Advanced Politeness, Impoliteness, and Mock Impoliteness Quiz</h1>
+        <div class="progress" id="progress">Question 1 of 10</div>
+
+        <!-- Question 1 -->
+        <div class="question active" id="q1">
+            <p>1. Brown & Levinson’s politeness theory defines "negative face" as freedom of action. How does this contrast with the critique that in Chinese culture, acts like offering or inviting are not face-threatening?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> a) Chinese culture prioritizes solidarity over freedom.</label>
+                <label><input type="radio" name="q1" value="b"> b) Chinese culture views such acts as obligations, not impositions.</label>
+                <label><input type="radio" name="q1" value="c"> c) Chinese culture rejects the concept of face entirely.</label>
+                <label><input type="radio" name="q1" value="d"> d) Chinese culture sees freedom as irrelevant to politeness.</label>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question" id="q2">
+            <p>2. In a meeting, a colleague says, "I hate to interrupt, but could we move this along a bit faster?" Which negative politeness strategy is this, and how does it mitigate a face threat?</p>
+            <textarea placeholder="Type your answer here..."></textarea>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question" id="q3">
+            <p>3. A teacher tells a student, "Your essay was a complete disaster." Is this positive or negative impoliteness, and how does it align with Culpeper’s definition of impoliteness?</p>
+            <textarea placeholder="Type your answer here..."></textarea>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question" id="q4">
+            <p>4. During a family dinner, Uncle Joe says to his nephew, "Still can’t cook, huh? This tastes like cardboard!" The nephew grins and says, "At least it’s not your cooking!" How does this illustrate mock impoliteness?</p>
+            <textarea placeholder="Type your answer here..."></textarea>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question" id="q5">
+            <p>5. A stranger on a bus says, "Excuse me, sir, would you mind lowering your voice just a tad?" Which strategy best reflects this as politeness in a socially distant context?</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> a) Bald-on record urgency</label>
+                <label><input type="radio" name="q5" value="b"> b) Positive politeness solidarity</label>
+                <label><input type="radio" name="q5" value="c"> c) Negative politeness deference</label>
+                <label><input type="radio" name="q5" value="d"> d) Off-record indirectness</label>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question" id="q6">
+            <p>6. Consider this exchange:<br>- A: "Let’s stop for a coffee, yeah?"<br>- B: "What, you think I’m your servant or something?"<br>How does B’s reply transform A’s politeness into impoliteness, and which face is targeted?</p>
+            <textarea placeholder="Type your answer here..."></textarea>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question" id="q7">
+            <p>7. One critique of Brown & Levinson’s theory is its reliance on invented examples. Why does this limit its validity, and how might analyzing real conversations improve it?</p>
+            <textarea placeholder="Type your answer here..."></textarea>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question" id="q8">
+            <p>8. A roommate says, "Wow, it’s amazing how dishes just pile up around here." How could this off-record statement become impolite, and what factors determine its impoliteness?</p>
+            <textarea placeholder="Type your answer here..."></textarea>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question" id="q9">
+            <p>9. At a job interview, the interviewer says, "Good effort, champ, but we need more experience." Why might this be impolite despite its positive tone, based on mismatched social expectations?</p>
+            <textarea placeholder="Type your answer here..."></textarea>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question" id="q10">
+            <p>10. Indirectness varies culturally. Create a scenario where a direct request is polite in one culture but impolite in another, and explain using politeness concepts.</p>
+            <textarea placeholder="Type your answer here..."></textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button id="prev" disabled>Previous</button>
+            <button id="next">Next</button>
+            <button id="restart" style="display:none;">Restart</button>
+        </div>
+
+        <!-- Summary -->
+        <div class="summary" id="summary">
+            <h2>Quiz Summary</h2>
+            <p id="score"></p>
+            <div id="answers"></div>
+        </div>
+    </div>
+
+    <script>
+        const questions = document.querySelectorAll('.question');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+        const restartBtn = document.getElementById('restart');
+        const progress = document.getElementById('progress');
+        const summary = document.getElementById('summary');
+        let currentQuestion = 0;
+        let answers = new Array(questions.length).fill(null);
+
+        function updateProgress() {
+            progress.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+            prevBtn.disabled = currentQuestion === 0;
+            nextBtn.textContent = currentQuestion === questions.length - 1 ? 'Submit' : 'Next';
+        }
+
+        function showQuestion(index) {
+            questions.forEach(q => q.classList.remove('active'));
+            questions[index].classList.add('active');
+            updateProgress();
+        }
+
+        function saveAnswer() {
+            const currentQ = questions[currentQuestion];
+            if (currentQ.querySelector('input[type="radio"]')) {
+                const selected = currentQ.querySelector('input[type="radio"]:checked');
+                answers[currentQuestion] = selected ? selected.value : null;
+            } else {
+                const text = currentQ.querySelector('textarea').value.trim();
+                answers[currentQuestion] = text || null;
+            }
+        }
+
+        function showSummary() {
+            saveAnswer();
+            questions.forEach(q => q.style.display = 'none');
+            progress.style.display = 'none';
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            summary.style.display = 'block';
+            restartBtn.style.display = 'inline';
+
+            let score = 0;
+            const correctAnswers = [
+                'b',
+                'Apologizing; it acknowledges the imposition and reduces the threat to the group’s autonomy.',
+                'Positive impoliteness; it attacks the student’s self-worth, clashing with expectations of constructive feedback.',
+                'Both treat the exchange as non-impolite banter, despite its potential to offend, signaling mutual understanding.',
+                'c',
+                'B uses positive impoliteness via a challenging question, targeting A’s positive face by questioning their worth.',
+                'Invented examples assume fixed politeness effects, missing dynamic face negotiation; real conversations reveal collaborative facework.',
+                'It becomes impolite if intended as sarcastic blame, offending via indirectness; perception hinges on intent and relational expectations.',
+                '"Champ" condescends, threatening the candidate’s positive face if they expect professional equality, not patronizing familiarity.',
+                'Scenario: Asking to borrow a pen. In Dutch culture, "Can I have your pen?" is polite, valuing directness and efficiency (bald-on record). In Japanese culture, it’s impolite, as indirectness like "Do you have a pen to spare?" respects autonomy (negative politeness).'
+            ];
+
+            let summaryHTML = '';
+            answers.forEach((answer, i) => {
+                const isCorrect = answer && answer.toLowerCase() === correctAnswers[i].toLowerCase();
+                if (isCorrect) score++;
+                summaryHTML += `
+                    <p><strong>Question ${i + 1}:</strong> Your answer: "${answer || 'Not answered'}"<br>
+                    <strong>Correct Answer:</strong> "${correctAnswers[i]}"<br>
+                    <strong>Explanation:</strong> ${explanations[i]}</p>
+                `;
+            });
+
+            document.getElementById('score').textContent = `Total Score: ${score} out of ${questions.length}`;
+            document.getElementById('answers').innerHTML = summaryHTML;
+        }
+
+        const explanations = [
+            'Brown & Levinson’s theory frames negative face as a desire for autonomy, where offers or invitations might impose. In Chinese culture, these acts are seen as fulfilling social duties, enhancing relationships rather than threatening freedom, highlighting a cultural divergence in how negative face is understood.',
+            'By prefacing the request with an apology, the speaker recognizes the potential disruption to others’ freedom to proceed at their pace. This strategy softens the directive, showing deference and minimizing the perceived imposition on the listeners’ negative face.',
+            'This criticism targets the student’s positive face—their desire to be valued—by harshly dismissing their work. Culpeper defines impoliteness as a negative attitude toward behaviors that violate social norms, here offending by failing to offer the expected academic support, likely causing emotional upset.',
+            'Mock impoliteness occurs when potentially rude remarks are evaluated as playful by participants. Uncle Joe’s insult could threaten the nephew’s positive face, but the nephew’s humorous retort shows they both see it as a joke, not a serious attack, fitting the concept of non-impolite intent in close relationships.',
+            'The polite phrasing, use of "sir," and minimizing language ("just a tad") show respect for the stranger’s autonomy, avoiding imposition. This aligns with politeness in distant relationships, where deference is used to acknowledge the other’s freedom rather than assuming familiarity or issuing a direct command.',
+            'A’s suggestion employs positive politeness, implying shared goals and camaraderie. B’s sarcastic response shifts this into impoliteness by accusing A of entitlement, attacking A’s self-esteem (positive face) and defying the cooperative tone A intended.',
+            'Pre-scripted utterances suggest politeness has predictable outcomes, ignoring how meaning evolves in context. Studying actual discourse would show how speakers and hearers jointly adjust face over time, offering a more flexible, realistic view of politeness as an interactive process.',
+            'As an off-record hint, it avoids direct responsibility for a complaint. If laced with sarcasm to criticize, it shifts to impoliteness by implying fault, threatening positive face. Whether it offends depends on if the hearer expects support but detects hostility, amplifying emotional impact.',
+            'Politeness relies on aligned views of social roles. The interviewer’s casual, superior tone clashes with a candidate anticipating formal respect, undermining their self-worth. This misalignment turns a compliment into a face threat, perceived as belittling in a power-imbalanced setting.',
+            'Dutch norms favor straightforwardness, seeing direct requests as respectful clarity, aligning with minimal face threat in cooperative contexts. Japanese norms prioritize deference, using indirectness to avoid imposing, reflecting a cultural emphasis on protecting the hearer’s freedom over explicitness.'
+        ];
+
+        prevBtn.addEventListener('click', () => {
+            saveAnswer();
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                showQuestion(currentQuestion);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            saveAnswer();
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                showQuestion(currentQuestion);
+            } else {
+                showSummary();
+            }
+        });
+
+        restartBtn.addEventListener('click', () => {
+            currentQuestion = 0;
+            answers = new Array(questions.length).fill(null);
+            questions.forEach(q => {
+                q.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+                if (q.querySelector('textarea')) q.querySelector('textarea').value = '';
+                q.style.display = 'block';
+            });
+            summary.style.display = 'none';
+            progress.style.display = 'block';
+            prevBtn.style.display = 'inline';
+            nextBtn.style.display = 'inline';
+            restartBtn.style.display = 'none';
+            showQuestion(0);
+        });
+
+        showQuestion(0);
+    </script>
+</body>
+</html>
